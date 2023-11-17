@@ -7,6 +7,8 @@
 package ezen.project.first.team2.app.newuser.pages.main.views;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 import ezen.project.first.team2.app.common.framework.View;
 import ezen.project.first.team2.app.newuser.pages.main.MainPage;
@@ -17,6 +19,18 @@ public class MainView extends View {
 
 	private JButton mBtn0 = new JButton();
 
+	private JButton mBtn1 = new JButton("추가");
+	private JButton mBtn2 = new JButton("초기화");	
+
+	private JLabel mNumLabel = new JLabel("회원 번호");
+	private JLabel mNameLabel = new JLabel("이름");
+	private JLabel mBirthLabel = new JLabel("생년월일");
+	private JLabel mPhoneNumLabel = new JLabel("전화번호");
+
+	private JTextField mNumtf = new JTextField(11);
+	private JTextField mNametf = new JTextField(11);
+	private JTextField mBirthtf = new JTextField(11);
+	private JTextField mPhoneNumtf = new JTextField(11);
 	// -------------------------------------------------------------------------
 
 	// 생성자
@@ -40,9 +54,21 @@ public class MainView extends View {
 	// 컨트롤 추가
 	@Override
 	protected void onAddCtrls() {
-		this.mBtn0.setText("버튼0");
+		// this.mBtn0.setText("버튼0");
 
-		this.add(this.mBtn0);
+		// this.add(this.mBtn0);
+		this.add(this.mBtn1);
+		this.add(this.mBtn2);
+
+		this.add(this.mNumLabel);
+		this.add(this.mNameLabel);
+		this.add(this.mBirthLabel);
+		this.add(this.mPhoneNumLabel);
+
+		this.add(this.mNumtf);
+		this.add(this.mNametf);
+		this.add(this.mBirthtf);
+		this.add(this.mPhoneNumtf);
 	}
 
 	// 이벤트 리스너 추가
